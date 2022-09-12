@@ -1,0 +1,95 @@
+<!DOCTYPE html><html><head><!-- belongs in the head--><meta charset="utf-8"><title>Ayurvedic Yoga Massage in Devon</title><meta name="viewport" content="width=device-width, user-scalable=no"><meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon"><!-- default stylesheet--><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro"><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!-- favicon? TODO--><!-- const cssFile is set in the page that calls the mixin--><link rel="stylesheet" type="text/css" href="../css/main.min.css"></head><body><div class="left50" id="vetContainer"><div id="detailsDiv"><h1>Intensive Massage Workshop Application</h1></div><div id="buttonz"><button id="yesBtn">YEP - we want</button><span>&emsp;</span><button id="noBtn">NO thank you</button></div></div><div class="right50 hidden" id="email"><form method="post" action="./../php/mailVetForm.php" id="vetForm" onsubmit="return sendEmail(this)"><p>Saghar, please add a little personal message underneath the text below.</p><p>For example, if you've rejected them, tell them why.</p><p>Then press the 'send email...' button' at the bottom</p><div id="msgDiv"><div id="msgTxt" contenteditable="true"></div></div><input class="hidden" type="text" id="punterMsg" name="punterMsg"><input type="submit" value="send email to client and saghar"><!-- button(type='submit' form='vetForm' onclick=sendEmail())--></form></div><script>main()
+
+function main() {
+  getAndShowDetails()
+  // listen for button mouse clicks
+  listenOut('yesBtn', true)
+  listenOut('noBtn', false)
+}
+
+
+function getDetails() {
+  // populate and return details array with url query string parameters
+  const details = []
+  const urlParams = new URLSearchParams(window.location.search)
+  for (let p of urlParams) {
+    details[p[0]] = p[1]   // key = value
+  }
+  return details
+}
+
+
+function getAndShowDetails() {
+  // iterate over details and show on screen
+  const doc = document
+  const details = getDetails()
+  const detailsDiv = doc.getElementById('detailsDiv')
+  for (let d in details) {
+    if (d != 'mapRef') {
+      let paraNode = doc.createElement('P')
+      let textNode = doc.createTextNode(d + ': ' + details[d])
+      paraNode.appendChild(textNode)
+      detailsDiv.appendChild(paraNode)
+    }
+  }
+}
+
+
+function listenOut(btn, good) {
+  document.getElementById(btn)
+          .addEventListener('click', () => { vet(good) })
+}
+
+
+function vet(good) {
+  // called by YES/NO buttons
+  const doc = document
+  doc.getElementById('email').style.visibility = 'visible'
+  doc.getElementById('msgTxt').outerHTML = buildMessage(good)
+}
+
+
+function buildMessage(good) {
+  // build up message that gets sent to punter
+  const details = getDetails()
+  let msg = "<div id='msgTxt' contenteditable='true'>"
+          + '<h3>Hi ' + details['name']
+          + ', this is Saghar from ayurvedicyogamassage.org.uk.</h3>'
+          + '<p>I am ' + (good ? 'pleased ' : 'sorry ')
+          + 'to inform you that you have ' + (good ? '' : 'not ')
+          + 'been accepted onto the ayurvedic yoga massage intensive training course at '
+          + details['place'] + ' on ' + details['date'] + '</p><p>'
+          + (good ? 'Please press the button below for further details. Thank you.'
+                  : 'The reason why I am uncomfortable with training you is ') + '</p>'
+          + (good ? makePay4Button(details) : '')
+          + '<p>If you need to contact me, simply reply to this email '
+          + 'or phone Saghar on 07974 470 610</p>'
+          + '</div>'
+  return msg
+}
+
+
+function makePay4Button(details) {
+  const btnHtml = "<p>"
+                + "<a href='http://ayurvedicyogamassage.org.uk/pages/pay4training.html"
+                + "?name=" + details['name']
+                + "&place=" + details['place']
+                + "&address=" + details['address']
+                + "&mapRef=" + details['mapRef']
+                + "&date=" + details['date']
+                + "'>"
+                + "<button>more details</button>"
+                + "</a></p>"
+  return btnHtml
+}
+
+
+function sendEmail(form) {
+  // msg gets injected into hidden text field
+  // then return true, so form gets posted to php emailer
+  const doc = document
+  const txtField = doc.getElementById('punterMsg')
+  const msg =  doc.getElementById('msgTxt').outerHTML
+  txtField.value = msg
+  return true
+}</script></body></html>
