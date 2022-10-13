@@ -1,0 +1,18 @@
+* ~~ saghar new ~~ *
+
+* just uses stylus *
+* no moar pug :( -> just htmls...*
+* need to ftp changes to saghar server *
+
+Todo:
+  ☐ tidy css!! *BIG TASK*
+    ☐ use flex rather than left/right
+  ☐ " -> ' => can o' worms??
+  ☐ change price of paypal for dosha workshop
+
+##  
+Archive:
+  ✘ prettier?? @cancelled(13-10-22 17:08) @project(Todo)
+  ✔ add // seperators in index @done(13-10-22 17:08) @project(Todo)
+  ✔ move all files into www @done(13-10-22 16:47) @project(Todo)
+  ✔ make /stylus 'src' -> compile into www/main.css @done(13-10-22 16:47) @project(Todo)

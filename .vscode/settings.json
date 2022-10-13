@@ -1,0 +1,12 @@
+{
+  "compile-hero.jade-output-toggle": false,
+  "compile-hero.javascript-output-toggle": false,
+  "compile-hero.pug-output-toggle": false,
+  "compile-hero.less-output-toggle": false,
+  "compile-hero.sass-output-toggle": false,
+  "compile-hero.scss-output-toggle": false,
+  "compile-hero.stylus-output-directory": "./../www",
+  "compile-hero.typescriptx-output-toggle": false,
+  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "explicitFolding.autoFold": "comments"
+}
