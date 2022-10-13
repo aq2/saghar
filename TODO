@@ -9,11 +9,11 @@ Todo:
     ☐ use flex rather than left/right
   ☐ " -> ' => can o' worms??
   ☐ change price of paypal for dosha workshop
-  ☐ check css and js for all pages!
   ☐ replace old gallery with same as rogers?
 
 ##  
 Archive:
+  ✔ check css and js for all pages! @done(13-10-22 17:36) @project(Todo)
   ✘ prettier?? @cancelled(13-10-22 17:08) @project(Todo)
   ✔ add // seperators in index @done(13-10-22 17:08) @project(Todo)
   ✔ move all files into www @done(13-10-22 16:47) @project(Todo)
