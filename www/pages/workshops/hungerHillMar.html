@@ -1,244 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- set cssFile var for the mixin in the head include-->
-    <!-- belongs in the head-->
-    <meta charset="utf-8" />
-    <title>Ayurvedic Yoga Massage in Devon</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta
-      name="description"
-      content="Ayurvedic Yoga Massage and Workshops in Devon"
-    />
-    <!-- default stylesheet-->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro"
-    />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- favicon? TODO-->
-    <!-- const cssFile is set in the page that calls the mixin-->
-    <link rel="stylesheet" type="text/css" href="./../../css/main.min.css" />
-    <!-- doesn't actually include mixin in html, but makes it available-->
-  </head>
-  <body>
-    <div id="container">
-      <!-- set workshop data for workshop mixin--><!-- call and include mixin in html-->
-      <header>
-        <img src="./../../images/header.jpg" />
-        <h1>Ayurvedic Yoga Massage</h1>
-      </header>
-      <div id="apply_navbar">
-        <a href="./../../index.html">back to main site</a>
-      </div>
-      <div id="info">
-        <h2>Ayurvedic Yoga Massage Intensive Training</h2>
-        <h4>Mon 14th - Thu 17th March 2022</h4>
-        <p>9am - 4pm, with an hour lunch break</p>
-        <h4>Hunger Hills Yurts</h4>
-        <iframe
-          class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96285.95364073697!2d-3.3628547408609584!3d50.64191093906292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d9ea450520d97%3A0xe9396096ca54de57!2sHunger+Hill+Yurts!5e0!3m2!1sen!2suk!4v1563455133627!5m2!1sen!2suk"
-          frameborder="0"
-        ></iframe>
-        <p>Newton Poppleford, Sidmouth</p>
-        <p>
-          &pound;350 for individuals, &pound;90 deposit requested at least two
-          weeks before start date
-        </p>
-        <p>Full refund for instructor cancellation</p>
-        <p>
-          It is important to have attended a workshop session before taking the
-          training course.<br />
-          Alternatively, you can phone or
-          <a href="mailto:saghar@ayurvedicyogamassage.org.uk">email Saghar</a>
-          to arrange a short interview.
-        </p>
-        <form
-          method="post"
-          action="./../../php/processIntWorkshopForm.php"
-          onsubmit="return validate(this)"
-        >
-          <p>
-            To apply for a place on this training course, please fill out the
-            following form, and I'll get back to you as soon as I can.
-          </p>
-          <p>
-            I care about your privacy, and I will not share any of your
-            information with anybody.
-          </p>
-          <fieldset>
-            <p>Your details</p>
-            <div>
-              <input
-                class="name"
-                type="text"
-                name="name"
-                placeholder="Your name"
-                autocomplete="off"
-                required
-                autofocus
-              />
-            </div>
-            <div>
-              <select class="gender" name="gender" required>
-                <option value="female">female</option>
-                <option value="male">male</option>
-                <option value="other-gender">it's complicated</option>
-              </select>
-            </div>
-            <div>
-              <input
-                class="age"
-                type="number"
-                name="age"
-                placeholder="Your age"
-                autocomplete="off"
-                required
-              />
-            </div>
-            <div>
-              <input
-                class="tel"
-                type="tel"
-                name="tel"
-                placeholder="Your phone number"
-                autocomplete="off"
-                required
-              />
-            </div>
-            <div>
-              <input
-                class="email"
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-              />
-            </div>
-            <div>
-              <span class="question">Any relevant health conditions?</span
-              ><input
-                id="health-box"
-                type="checkbox"
-                autocomplete="off"
-              /><textarea
-                id="health"
-                name="health"
-                rows="3"
-                cols="30"
-                placeholder="Please provide brief details..."
-                autocomplete="off"
-              ></textarea>
-            </div>
-            <div>
-              <span class="question">Are you taking any medications?</span
-              ><input
-                id="meds-box"
-                type="checkbox"
-                autocomplete="off"
-              /><textarea
-                id="meds"
-                name="medic"
-                rows="3"
-                cols="30"
-                placeholder="Please provide relevant details..."
-                autocomplete="off"
-              ></textarea>
-            </div>
-            <div>
-              <span class="question">Have you taken any of our workshops?</span
-              ><input
-                id="wksh-box"
-                type="checkbox"
-                autocomplete="off"
-              /><textarea
-                id="workshop"
-                name="wksh"
-                rows="3"
-                cols="30"
-                placeholder="Please provide brief details of location and approximate date..."
-                autocomplete="off"
-              ></textarea>
-            </div>
-            <div>
-              <span class="question"
-                >Do you have any other training course qualification?</span
-              ><input
-                id="quals-box"
-                type="checkbox"
-                autocomplete="off"
-              /><textarea
-                id="quals"
-                name="quals"
-                rows="3"
-                cols="30"
-                placeholder="Please provide brief details"
-                autocomplete="off"
-              ></textarea>
-            </div>
-            <div>
-              <input
-                class="website"
-                type="text"
-                name="website"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <input
-                name="subject"
-                type="hidden"
-                value="hunger workshop 14th March"
-              /><input
-                name="date"
-                type="hidden"
-                value="Mon 14th - Thu 17th March 2022"
-              /><input
-                name="place"
-                type="hidden"
-                value="Hunger Hills Yurts"
-              /><input
-                name="address"
-                type="hidden"
-                value="Newton Poppleford, Sidmouth"
-              /><input
-                name="iframeSrc"
-                type="hidden"
-                value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96285.95364073697!2d-3.3628547408609584!3d50.64191093906292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d9ea450520d97%3A0xe9396096ca54de57!2sHunger+Hill+Yurts!5e0!3m2!1sen!2suk!4v1563455133627!5m2!1sen!2suk"
-              /><input type="submit" value="Apply for course" name="button" />
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <script src="../../js/validators.js"></script>
-      <script>
-        $(document).ready(() => {
-          $("#health-box").click(() => {
-            $("#health").fadeToggle(400);
-          });
-          $("#meds-box").click(() => {
-            $("#meds").fadeToggle(400);
-          });
-          $("#quals-box").click(() => {
-            $("#quals").fadeToggle(400);
-          });
-          $("#wksh-box").click(() => {
-            $("#workshop").fadeToggle(400);
-          });
-        });
 
-        function validate(form) {
-          let failMessage =
-            validateName(form.name.value) +
-            validateAge(form.age.value) +
-            validatePhone(form.tel.value) +
-            validateEmail(form.email.value);
+<head>
+  <!-- set cssFile var for the mixin in the head include-->
+  <!-- belongs in the head-->
+  <meta charset="utf-8" />
+  <title>Ayurvedic Yoga Massage in Devon</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon" />
+  <!-- default stylesheet-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- favicon? TODO-->
+  <!-- const cssFile is set in the page that calls the mixin-->
+  <link rel="stylesheet" type="text/css" href="./../../main.css" />
+  <!-- doesn't actually include mixin in html, but makes it available-->
+</head>
 
-          return check4fail(failMessage);
-        }
-      </script>
+<body>
+  <div id="container">
+    <!-- set workshop data for workshop mixin-->
+    <!-- call and include mixin in html-->
+    <header>
+      <img src="./../../images/header.jpg" />
+      <h1>Ayurvedic Yoga Massage</h1>
+    </header>
+    <div id="apply_navbar">
+      <a href="./../../index.html">back to main site</a>
     </div>
-  </body>
+    <div id="info">
+      <h2>Ayurvedic Yoga Massage Intensive Training</h2>
+      <h4>Mon 14th - Thu 17th March 2022</h4>
+      <p>9am - 4pm, with an hour lunch break</p>
+      <h4>Hunger Hills Yurts</h4>
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96285.95364073697!2d-3.3628547408609584!3d50.64191093906292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d9ea450520d97%3A0xe9396096ca54de57!2sHunger+Hill+Yurts!5e0!3m2!1sen!2suk!4v1563455133627!5m2!1sen!2suk"
+        frameborder="0"></iframe>
+      <p>Newton Poppleford, Sidmouth</p>
+      <p>
+        &pound;350 for individuals, &pound;90 deposit requested at least two
+        weeks before start date
+      </p>
+      <p>Full refund for instructor cancellation</p>
+      <p>
+        It is important to have attended a workshop session before taking the
+        training course.<br />
+        Alternatively, you can phone or
+        <a href="mailto:saghar@ayurvedicyogamassage.org.uk">email Saghar</a>
+        to arrange a short interview.
+      </p>
+      <form method="post" action="./../../php/processIntWorkshopForm.php" onsubmit="return validate(this)">
+        <p>
+          To apply for a place on this training course, please fill out the
+          following form, and I'll get back to you as soon as I can.
+        </p>
+        <p>
+          I care about your privacy, and I will not share any of your
+          information with anybody.
+        </p>
+        <fieldset>
+          <p>Your details</p>
+          <div>
+            <input class="name" type="text" name="name" placeholder="Your name" autocomplete="off" required autofocus />
+          </div>
+          <div>
+            <select class="gender" name="gender" required>
+              <option value="female">female</option>
+              <option value="male">male</option>
+              <option value="other-gender">it's complicated</option>
+            </select>
+          </div>
+          <div>
+            <input class="age" type="number" name="age" placeholder="Your age" autocomplete="off" required />
+          </div>
+          <div>
+            <input class="tel" type="tel" name="tel" placeholder="Your phone number" autocomplete="off" required />
+          </div>
+          <div>
+            <input class="email" type="email" name="email" placeholder="Your email address" required />
+          </div>
+          <div>
+            <span class="question">Any relevant health conditions?</span><input id="health-box" type="checkbox"
+              autocomplete="off" /><textarea id="health" name="health" rows="3" cols="30"
+              placeholder="Please provide brief details..." autocomplete="off"></textarea>
+          </div>
+          <div>
+            <span class="question">Are you taking any medications?</span><input id="meds-box" type="checkbox"
+              autocomplete="off" /><textarea id="meds" name="medic" rows="3" cols="30"
+              placeholder="Please provide relevant details..." autocomplete="off"></textarea>
+          </div>
+          <div>
+            <span class="question">Have you taken any of our workshops?</span><input id="wksh-box" type="checkbox"
+              autocomplete="off" /><textarea id="workshop" name="wksh" rows="3" cols="30"
+              placeholder="Please provide brief details of location and approximate date..."
+              autocomplete="off"></textarea>
+          </div>
+          <div>
+            <span class="question">Do you have any other training course qualification?</span><input id="quals-box"
+              type="checkbox" autocomplete="off" /><textarea id="quals" name="quals" rows="3" cols="30"
+              placeholder="Please provide brief details" autocomplete="off"></textarea>
+          </div>
+          <div>
+            <input class="website" type="text" name="website" autocomplete="off" />
+          </div>
+          <div>
+            <input name="subject" type="hidden" value="hunger workshop 14th March" /><input name="date" type="hidden"
+              value="Mon 14th - Thu 17th March 2022" /><input name="place" type="hidden"
+              value="Hunger Hills Yurts" /><input name="address" type="hidden"
+              value="Newton Poppleford, Sidmouth" /><input name="iframeSrc" type="hidden"
+              value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96285.95364073697!2d-3.3628547408609584!3d50.64191093906292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d9ea450520d97%3A0xe9396096ca54de57!2sHunger+Hill+Yurts!5e0!3m2!1sen!2suk!4v1563455133627!5m2!1sen!2suk" /><input
+              type="submit" value="Apply for course" name="button" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="../../js/validators.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#health-box").click(() => {
+          $("#health").fadeToggle(400);
+        });
+        $("#meds-box").click(() => {
+          $("#meds").fadeToggle(400);
+        });
+        $("#quals-box").click(() => {
+          $("#quals").fadeToggle(400);
+        });
+        $("#wksh-box").click(() => {
+          $("#workshop").fadeToggle(400);
+        });
+      });
+
+      function validate(form) {
+        let failMessage =
+          validateName(form.name.value) +
+          validateAge(form.age.value) +
+          validatePhone(form.tel.value) +
+          validateEmail(form.email.value);
+
+        return check4fail(failMessage);
+      }
+    </script>
+  </div>
+</body>
+
 </html>

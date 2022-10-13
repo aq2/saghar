@@ -1,6 +1,49 @@
-<!DOCTYPE html><html><head><!-- belongs in the head--><meta charset="utf-8"><title>Ayurvedic Yoga Massage in Devon</title><meta name="viewport" content="width=device-width, user-scalable=no"><meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon"><!-- default stylesheet--><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro"><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!-- favicon? TODO--><!-- const cssFile is set in the page that calls the mixin--><link rel="stylesheet" type="text/css" href="../css/main.min.css"></head><body><div id="container"><header><img src="../images/header.jpg"><h1>Ayurvedic Yoga Massage Payments</h1></header></div><!-- h1 Massage Payments--><form method="post" action="./../../php/processMassagePaymentForm.php" onsubmit="return validate(this)"><p>To pay for a massage you have had, please fill out the following form. I do hope you enjoyed the massage, and would love to see you again.</p><fieldset><p>Your details</p><div><input class="name" type="text" name="name" placeholder="Your name" autocomplete="off" required autofocus></div><div><input class="email" type="email" name="email" placeholder="Your email address" required></div><div><input class="date" type="text" name="date" placeholder="Approx date of massage" required></div><div><select class="type" name="type" required><option value="head">Head massage: &nbsp;&pound;20</option><option value="back">Back and neck: &nbsp;&pound;30</option><option value="full">Full body: &nbsp;&pound;50</option><option value="deluxe">Deluxe: &nbsp;&pound;70</option></select></div><div><input class="website" type="text" name="website" autocomplete="off"></div><div><input name="subject" type="hidden" value="massage payment"><input type="submit" value="Continue to PayPal" name="submit"></div></fieldset></form><script src="../../js/validators.js"></script><script>function validate(form) {
-  let failMessage = validateName(form.name.value)
-                  + validateEmail(form.email.value)
+<!DOCTYPE html>
+<html>
 
-  return check4fail(failMessage)
-}</script></body></html>
+<head>
+  <meta charset="utf-8">
+  <title>Ayurvedic Yoga Massage in Devon</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon"><!-- default stylesheet-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!-- favicon? TODO-->
+  <link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+
+<body>
+  <div id="container">
+    <header><img src="../images/header.jpg">
+      <h1>Ayurvedic Yoga Massage Payments</h1>
+    </header>
+  </div><!-- h1 Massage Payments-->
+  <form method="post" action="./../../php/processMassagePaymentForm.php" onsubmit="return validate(this)">
+    <p>To pay for a massage you have had, please fill out the following form. I do hope you enjoyed the massage, and
+      would love to see you again.</p>
+    <fieldset>
+      <p>Your details</p>
+      <div><input class="name" type="text" name="name" placeholder="Your name" autocomplete="off" required autofocus>
+      </div>
+      <div><input class="email" type="email" name="email" placeholder="Your email address" required></div>
+      <div><input class="date" type="text" name="date" placeholder="Approx date of massage" required></div>
+      <div><select class="type" name="type" required>
+          <option value="head">Head massage: &nbsp;&pound;20</option>
+          <option value="back">Back and neck: &nbsp;&pound;30</option>
+          <option value="full">Full body: &nbsp;&pound;50</option>
+          <option value="deluxe">Deluxe: &nbsp;&pound;70</option>
+        </select></div>
+      <div><input class="website" type="text" name="website" autocomplete="off"></div>
+      <div><input name="subject" type="hidden" value="massage payment"><input type="submit" value="Continue to PayPal"
+          name="submit"></div>
+    </fieldset>
+  </form>
+  <script src="../../js/validators.js"></script>
+  <script>function validate(form) {
+      let failMessage = validateName(form.name.value)
+        + validateEmail(form.email.value)
+
+      return check4fail(failMessage)
+    }</script>
+</body>
+
+</html>

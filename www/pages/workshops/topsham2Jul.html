@@ -1,7 +1,63 @@
-<!DOCTYPE html><html><head><!-- set cssFile var for the mixin in the head include--><!-- belongs in the head--><meta charset="utf-8"><title>Ayurvedic Yoga Massage in Devon</title><meta name="viewport" content="width=device-width, user-scalable=no"><meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon"><!-- default stylesheet--><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro"><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!-- favicon? TODO--><!-- const cssFile is set in the page that calls the mixin--><link rel="stylesheet" type="text/css" href="./../../css/main.min.css"><!-- doesn't actually include mixin in html, but makes it available--></head><body><div id="container"><!-- set workshop data for workshop mixin--><!-- call and include mixin in html--><header><img src="./../../images/header.jpg"><h1>Ayurvedic Yoga Massage</h1></header><div id="apply_navbar"><a href="./../../index.html">back to main site</a></div><div id="info"><h2>Ayurveda and Dosha Principles Workshop</h2><h4>Saturday, 2nd July 2022<p>1 - 3pm</p></h4><h4>Estuary Clinic of Integrated Health<p>19 Fore Street, Topsham, Exeter</p></h4><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.983742398459!2d-3.4671504846440584!3d50.683126778453584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486da116e8244095%3A0xa12be0972d5a0df!2sEstuary%20Clinic!5e0!3m2!1sen!2suk!4v1650109929261!5m2!1sen!2suk" frameborder="0"></iframe><h4>&pound;20 for single ticket<p>Full refund for instructor cancellation</p></h4><form method="post" action="./../../php/processDoshaWorkshopForm.php" onsubmit="return validate(this)"><p>To book and pay for a place on this workshop, please fill out the following form, and I'll get back to you as soon as I can.</p><fieldset><p>Your details</p><div><input class="name" type="text" name="name" placeholder="Your name" autocomplete="off" required autofocus></div><div><input class="tel" type="tel" name="tel" placeholder="Your phone number" autocomplete="off" required></div><div><input class="email" type="email" name="email" placeholder="Your email address" required></div><div><input class="website" type="text" name="website" autocomplete="off"></div><div><input name="subject" type="hidden" value="Topsham dosha workshop 2nd July"><input type="submit" value="Continue to PayPal" name="submit"></div></fieldset></form></div><script src="../../js/validators.js"></script><script>function validate(form) {
-  let failMessage = validateName(form.name.value)
-                  + validatePhone(form.tel.value)
-                  + validateEmail(form.email.value)
+<!DOCTYPE html>
+<html>
 
-  return check4fail(failMessage)
-}</script></div></body></html>
+<head>
+  <!-- set cssFile var for the mixin in the head include-->
+  <!-- belongs in the head-->
+  <meta charset="utf-8">
+  <title>Ayurvedic Yoga Massage in Devon</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon"><!-- default stylesheet-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!-- favicon? TODO-->
+  <!-- const cssFile is set in the page that calls the mixin-->
+  <link rel="stylesheet" type="text/css" href="./../../main.css">
+  <!-- doesn't actually include mixin in html, but makes it available-->
+</head>
+
+<body>
+  <div id="container">
+    <!-- set workshop data for workshop mixin-->
+    <!-- call and include mixin in html-->
+    <header><img src="./../../images/header.jpg">
+      <h1>Ayurvedic Yoga Massage</h1>
+    </header>
+    <div id="apply_navbar"><a href="./../../index.html">back to main site</a></div>
+    <div id="info">
+      <h2>Ayurveda and Dosha Principles Workshop</h2>
+      <h4>Saturday, 2nd July 2022<p>1 - 3pm</p>
+      </h4>
+      <h4>Estuary Clinic of Integrated Health<p>19 Fore Street, Topsham, Exeter</p>
+      </h4><iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.983742398459!2d-3.4671504846440584!3d50.683126778453584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486da116e8244095%3A0xa12be0972d5a0df!2sEstuary%20Clinic!5e0!3m2!1sen!2suk!4v1650109929261!5m2!1sen!2suk"
+        frameborder="0"></iframe>
+      <h4>&pound;20 for single ticket<p>Full refund for instructor cancellation</p>
+      </h4>
+      <form method="post" action="./../../php/processDoshaWorkshopForm.php" onsubmit="return validate(this)">
+        <p>To book and pay for a place on this workshop, please fill out the following form, and I'll get back to you as
+          soon as I can.</p>
+        <fieldset>
+          <p>Your details</p>
+          <div><input class="name" type="text" name="name" placeholder="Your name" autocomplete="off" required
+              autofocus></div>
+          <div><input class="tel" type="tel" name="tel" placeholder="Your phone number" autocomplete="off" required>
+          </div>
+          <div><input class="email" type="email" name="email" placeholder="Your email address" required></div>
+          <div><input class="website" type="text" name="website" autocomplete="off"></div>
+          <div><input name="subject" type="hidden" value="Topsham dosha workshop 2nd July"><input type="submit"
+              value="Continue to PayPal" name="submit"></div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="../../js/validators.js"></script>
+    <script>function validate(form) {
+        let failMessage = validateName(form.name.value)
+          + validatePhone(form.tel.value)
+          + validateEmail(form.email.value)
+
+        return check4fail(failMessage)
+      }</script>
+  </div>
+</body>
+
+</html>

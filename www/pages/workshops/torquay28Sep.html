@@ -1,9 +1,73 @@
-<!DOCTYPE html><html><head><!-- set cssFile var for the mixin in the head include--><!-- belongs in the head--><meta charset="utf-8"><title>Ayurvedic Yoga Massage in Devon</title><meta name="viewport" content="width=device-width, user-scalable=no"><meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon"><!-- default stylesheet--><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro"><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!-- favicon? TODO--><!-- const cssFile is set in the page that calls the mixin--><link rel="stylesheet" type="text/css" href="./../../css/main.min.css"><!-- doesn't actually include mixin in html, but makes it available--></head><body><div id="container"><!-- set workshop data for workshop mixin--><!-- call and include mixin in html--><header><img src="./../../images/header.jpg"><h1>Ayurvedic Yoga Massage</h1></header><div id="apply_navbar"><a href="./../../index.html">back to main site</a></div><div id="info"><h2>Ayurvedic Yoga Massage Workshop</h2><h4>Saturday, 28th September 2019<p>1 - 4pm</p></h4><h4>Yoga Torquay<p>Park Lane, Torquay</p></h4><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5079.983127521259!2d-3.5257062866980977!3d50.45988178253823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d0f0f2a8cf1ff%3A0xb272acb799334d88!2sYoga+Torquay!5e0!3m2!1sen!2suk!4v1565880541378!5m2!1sen!2suk" frameborder="0"></iframe><h4>&pound;30 for individuals, &pound;50 for a couple (any partner or friend)<p>&pound;10 non-refundable deposit for client cancellation<br>
-Full refund for instructor cancellation
-</p></h4><form method="post" action="./../../php/processAymWorkshopForm.php" onsubmit="return validate(this)"><p>To book and pay for a place on this workshop, please fill out the following form, and I'll get back to you as soon as I can.</p><fieldset><p>Your details</p><div><input class="name" type="text" name="name" placeholder="Your name" autocomplete="off" required autofocus></div><div><input class="tel" type="tel" name="tel" placeholder="Your phone number" autocomplete="off" required></div><div><input class="email" type="email" name="email" placeholder="Your email address" required></div><div><select class="tickets" name="tickets" required><option value="deposit">Deposit: &nbsp;&pound;10</option><option value="single_full">Single ticket: &nbsp;&pound;30</option><option value="single_remainder">Remaining balance: &nbsp;&pound;20</option><option value="couple_full">Double ticket: &nbsp;&pound;50</option><option value="couple_remainder">Remaining balance: &nbsp;&pound;40</option></select></div><div><input class="website" type="text" name="website" autocomplete="off"></div><div><input name="subject" type="hidden" value="Torquay workshop 28th September"><input type="submit" value="Continue to PayPal" name="submit"></div></fieldset></form></div><script src="../../js/validators.js"></script><script>function validate(form) {
-  let failMessage = validateName(form.name.value)
-                  + validatePhone(form.tel.value)
-                  + validateEmail(form.email.value)
+<!DOCTYPE html>
+<html>
 
-  return check4fail(failMessage)
-}</script></div></body></html>
+<head>
+  <!-- set cssFile var for the mixin in the head include-->
+  <!-- belongs in the head-->
+  <meta charset="utf-8">
+  <title>Ayurvedic Yoga Massage in Devon</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="description" content="Ayurvedic Yoga Massage and Workshops in Devon"><!-- default stylesheet-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Source+Sans+Pro">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!-- favicon? TODO-->
+  <!-- const cssFile is set in the page that calls the mixin-->
+  <link rel="stylesheet" type="text/css" href="./../../main.css">
+  <!-- doesn't actually include mixin in html, but makes it available-->
+</head>
+
+<body>
+  <div id="container">
+    <!-- set workshop data for workshop mixin-->
+    <!-- call and include mixin in html-->
+    <header><img src="./../../images/header.jpg">
+      <h1>Ayurvedic Yoga Massage</h1>
+    </header>
+    <div id="apply_navbar"><a href="./../../index.html">back to main site</a></div>
+    <div id="info">
+      <h2>Ayurvedic Yoga Massage Workshop</h2>
+      <h4>Saturday, 28th September 2019<p>1 - 4pm</p>
+      </h4>
+      <h4>Yoga Torquay<p>Park Lane, Torquay</p>
+      </h4><iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5079.983127521259!2d-3.5257062866980977!3d50.45988178253823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d0f0f2a8cf1ff%3A0xb272acb799334d88!2sYoga+Torquay!5e0!3m2!1sen!2suk!4v1565880541378!5m2!1sen!2suk"
+        frameborder="0"></iframe>
+      <h4>&pound;30 for individuals, &pound;50 for a couple (any partner or friend)<p>&pound;10 non-refundable deposit
+          for client cancellation<br>
+          Full refund for instructor cancellation
+        </p>
+      </h4>
+      <form method="post" action="./../../php/processAymWorkshopForm.php" onsubmit="return validate(this)">
+        <p>To book and pay for a place on this workshop, please fill out the following form, and I'll get back to you as
+          soon as I can.</p>
+        <fieldset>
+          <p>Your details</p>
+          <div><input class="name" type="text" name="name" placeholder="Your name" autocomplete="off" required
+              autofocus></div>
+          <div><input class="tel" type="tel" name="tel" placeholder="Your phone number" autocomplete="off" required>
+          </div>
+          <div><input class="email" type="email" name="email" placeholder="Your email address" required></div>
+          <div><select class="tickets" name="tickets" required>
+              <option value="deposit">Deposit: &nbsp;&pound;10</option>
+              <option value="single_full">Single ticket: &nbsp;&pound;30</option>
+              <option value="single_remainder">Remaining balance: &nbsp;&pound;20</option>
+              <option value="couple_full">Double ticket: &nbsp;&pound;50</option>
+              <option value="couple_remainder">Remaining balance: &nbsp;&pound;40</option>
+            </select></div>
+          <div><input class="website" type="text" name="website" autocomplete="off"></div>
+          <div><input name="subject" type="hidden" value="Torquay workshop 28th September"><input type="submit"
+              value="Continue to PayPal" name="submit"></div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="../../js/validators.js"></script>
+    <script>function validate(form) {
+        let failMessage = validateName(form.name.value)
+          + validatePhone(form.tel.value)
+          + validateEmail(form.email.value)
+
+        return check4fail(failMessage)
+      }</script>
+  </div>
+</body>
+
+</html>
