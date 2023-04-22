@@ -8,5 +8,6 @@
   "compile-hero.stylus-output-directory": "./../www",
   "compile-hero.typescriptx-output-toggle": false,
   "compile-hero.disable-compile-files-on-did-save-code": false,
-  "explicitFolding.autoFold": "comments"
+  "explicitFolding.autoFold": "comments",
+  "liveServer.settings.port": 5501
 }

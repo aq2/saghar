@@ -18,7 +18,9 @@
     />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- favicon? TODO-->
+    <!-- const cssFile is set in the page that calls the mixin-->
     <link rel="stylesheet" type="text/css" href="./../../main.css" />
+    <!-- doesn't actually include mixin in html, but makes it available-->
   </head>
   <body>
     <div id="container">
@@ -31,14 +33,14 @@
         <a href="./../../index.html">back to main site</a>
       </div>
       <div id="info">
-        <h2>Ayurveda in Daily Life Workshop</h2>
+        <h2>Ayurvedic Yoga Massage Workshop</h2>
         <h4>
-          Saturday, 29th October 2022
-          <p>11am - 1pm</p>
+          Saturday, 19th November 2022
+          <p>11am - 2pm</p>
         </h4>
         <h4>
-          derekthedog yoga centre
-          <p>83 Queen St, Exeter</p>
+          derekthedog Yoga Centre
+          <p>83/84 Queen Street, Exeter</p>
         </h4>
         <iframe
           class="map"
@@ -46,12 +48,16 @@
           frameborder="0"
         ></iframe>
         <h4>
-          &pound;20 for single ticket
-          <p>Full refund for instructor cancellation</p>
+          &pound;40 for individuals, &pound;60 for a couple (any partner or
+          friend)
+          <p>
+            &pound;10 non-refundable deposit for client cancellation<br />
+            Full refund for instructor cancellation
+          </p>
         </h4>
         <form
           method="post"
-          action="./../../php/processDoshaWorkshopForm.php"
+          action="./../../php/processAymWorkshopForm.php"
           onsubmit="return validate(this)"
         >
           <p>
@@ -91,6 +97,23 @@
               />
             </div>
             <div>
+              <select class="tickets" name="tickets" required>
+                <option value="deposit">Deposit: &nbsp;&pound;10</option>
+                <option value="single_full">
+                  Single ticket: &nbsp;&pound;40
+                </option>
+                <option value="single_remainder">
+                  Remaining balance: &nbsp;&pound;30
+                </option>
+                <option value="couple_full">
+                  Double ticket: &nbsp;&pound;60
+                </option>
+                <option value="couple_remainder">
+                  Remaining balance: &nbsp;&pound;50
+                </option>
+              </select>
+            </div>
+            <div>
               <input
                 class="website"
                 type="text"
@@ -102,7 +125,7 @@
               <input
                 name="subject"
                 type="hidden"
-                value="derekthedog dosha workshop 29th September"
+                value="derekthedog yoga workshop 1st October"
               /><input type="submit" value="Continue to PayPal" name="submit" />
             </div>
           </fieldset>
