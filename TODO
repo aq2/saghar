@@ -4,18 +4,22 @@
 * no moar pug :( -> just htmls...*
 * need to ftp changes to saghar server *
 
+NEW:
+  ☐ make new tabbed paged for joyful
+  ☐ add programme of events
+
 Todo:
   ☐ tidy css!! *BIG TASK*
     ☐ use flex rather than left/right
-  ☐ " -> ' => can o' worms??
-  ✔ change price of paypal for dosha workshop @done(26-10-22 11:26)
-  ☐ replace old gallery with same as rogers?
   ☐ * ASK FOR PAYMENT! *
-  ☐ auto ftp after git push???
-  ☐ 💡 use php 'templating' 🙀
 
-##  
+##
 Archive:
+  ✘ " -> ' => can o' worms?? @cancelled(15-05-23 13:58) @project(Todo)
+  ✔ change price of paypal for dosha workshop @done(26-10-22 11:26) @project(Todo)
+  ✘ replace old gallery with same as rogers? @cancelled(15-05-23 13:58) @project(Todo)
+  ✘ auto ftp after git push??? @cancelled(15-05-23 13:58) @project(Todo)
+  ✘ 💡 use php 'templating' 🙀 @cancelled(15-05-23 13:58) @project(Todo)
   ✔ check css and js for all pages! @done(13-10-22 17:36) @project(Todo)
   ✘ prettier?? @cancelled(13-10-22 17:08) @project(Todo)
   ✔ add // seperators in index @done(13-10-22 17:08) @project(Todo)

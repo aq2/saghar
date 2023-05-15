@@ -143,8 +143,8 @@ header h1 {
   width: 50px;
 }
 .left img,
-.right img
-{
+.right img,
+width 100% {
   max-width: 200px;
   margin: 0 auto 10px auto;
   border: 1px solid #731c25;
