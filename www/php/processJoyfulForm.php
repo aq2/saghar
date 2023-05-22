@@ -38,8 +38,8 @@ require_once('mailThis.php');
 if ($success) {
   // transer to paypal payment page
   $blah = "<meta http-equiv='refresh' content='0;url=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=";
-  print $blah . "85J3RLFL4QFHY" . "'>";
-  echo $blah . "85J3RLFL4QFHY" . "'>";
+  print $blah . "E72KUUJWDNE4C" . "'>";
+  echo $blah . "E72KUUJWDNE4C" . "'>";
 } else {
   print "<meta http-equiv='refresh' content='0;URL=../pages/formError.html'>";
 }

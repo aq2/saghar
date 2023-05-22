@@ -117,57 +117,57 @@
               <tr>
                 <td>18 June 🌑</td>
                 <td>Earlier lighter dinners for improved deeper sleep</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('18 June', 'Earlier lighter dinners for improved deeper sleep')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>25 June</td>
                 <td>Early to bed to boost your immune system</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('25 June', 'Early to bed to boost your immune system')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>2 July 🌕</td>
                 <td>Start the day right!</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('2 July', 'Start the day right!')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>9 July</td>
                 <td>Breath and body practice</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('9 July', 'Breath and body practice')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>16 July 🌑</td>
                 <td>The importance of a plant-based diet</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('16 July', 'The importance of a plant-based diet')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>23 July</td>
                 <td>Self-massage for body nurturing</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('23 July', 'Self-massage for body nurturing')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>6 August 🌕</td>
                 <td>Sitting in silence</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('6 August', 'Sitting in silence')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>13 August</td>
                 <td>Guidelines to healthy eating</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('13 August', 'Guidelines to healthy eating')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>20 August 🌑</td>
                 <td>Care for your five senses</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('20 August', 'Care for your five senses')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>27 August</td>
                 <td>Easeful living through positive thinking</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('27 August', 'Easeful living through positive thinking')"> Book a slot </button></td>
               </tr>
               <tr>
                 <td>3 September 🌕</td>
                 <td>Expand your growth and celebrations</td>
-                <td><button> Book a slot </button></td>
+                <td><button onclick="go('3 September', 'Expand your growth and celebrations')"> Book a slot </button></td>
               </tr>
             </table>
 
@@ -269,15 +269,17 @@
         <div id='myModal' class="modal">
           <div class='modal-content'>
             <span class='close'>&times;</span>
-            <p>blah blah blah</p>
-            <p id='date'>D</p>
-            <p id='title'>T</p>
 
-            <form method="post" action="./../../php/processAymWorkshopForm.php" onsubmit="return validate(this)">
-            <p>
-              To book and pay for a place on this workshop, please fill out the
-              following form, and I'll get back to you as soon as I can.
-            </p>
+
+            <form method="post" action="./../../php/processJoyfulForm.php" onsubmit="return validate(this)">
+              <h2>Joyful Living Zoom Session</h2>
+              <h4 id='title'>T</h4>
+              <h4 id='date'>D</h4>
+              <p></p>
+              <p>
+                To book and pay for a place on this session, please fill out the
+                following form, and I'll get back to you with the Zoom link as soon as I can.
+              </p>
               <fieldset>
                 <p>Your details</p>
                 <div>
@@ -295,11 +297,11 @@
                   <input class="website" type="text" name="website" autocomplete="off" />
                 </div>
                 <div>
-                  <input name="subject" type="hidden" value="derekthedog yoga workshop 1st October" />
+                  <input id='session' name="subject" type="hidden" >
                 </div>
                 <div>
                   <input type="checkbox" id="mailme" name="mailme" value="mailme">
-                  <label for="mailme">I want to join mailing list</label><br>
+                  <label for="mailme">Tick box to join my mailing list</label><br>
                   <p>Your email address is safe with us!</p>
                 </div>
                 <input type="submit" value="Continue to PayPal" name="submit" />
@@ -343,8 +345,10 @@
           }
         }
 
-        document.getElementById('date').textContent = date
+        document.getElementById('date').textContent = date + ', 10am '
         document.getElementById('title').textContent = title
+
+        document.getElementById('session').value = title + ' ' + date
       }
 
       </script>
