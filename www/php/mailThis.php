@@ -3,9 +3,14 @@
 // assumes $emailSubject and $emailBody have been set
 
 // where to send emails to, and where they appear to come from
+
 $emailTo = 'saghar@ayurvedicyogamassage.org.uk';
-$emailCC = 'angelo@fluxton.co.uk';
+$emailCC = 'mickey.megabyte@gmail.com';
 $emailFrom = 'saghar@ayurvedicyogamassage.org.uk';
+
+// $emailTo = 'mickey.megabyte@gmail.com';
+// $emailFrom = 'mickey.megabyte@gmail.com';
+
 
 // Create HTML email headers
 $headers  = 'MIME-Version: 1.0' . "\r\n"
@@ -19,7 +24,6 @@ $failPage = '../pages/formError.html';
 
 // send the mail, or at least try to...
 $success = mail($emailTo, $emailSubject, $emailBody, $headers);
-/* echo "email's gonna be $emailBody"; */
 
 // redirect to success page, hopefully
 if ($success) {
