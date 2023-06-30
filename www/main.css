@@ -266,13 +266,13 @@ th.last {
     margin: 5px auto;
   }
 }
-#special {
+.special {
   width: 80%;
   background: #bd900a;
   margin: 0 auto;
   padding: 0.5em;
 }
-#special h1 {
+.special h1 {
   text-align: right;
   font-size: 16px;
   margin: 0;
@@ -291,6 +291,14 @@ h1 {
   margin: 0.67em 0;
   letter-spacing: 2px;
   margin-bottom: 7px;
+}
+.black {
+  color: #000;
+}
+.big {
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #000;
 }
 h2 {
   font-size: 1.75em;
@@ -469,6 +477,13 @@ a:visited {
   h1 {
     font-size: 1em;
   }
+}
+.vishnu {
+  color: #fff;
+  background: #bd900a;
+  margin: 1em;
+  padding: 1em;
+  font-size: 1.4em;
 }
 form {
   padding: 1em;
